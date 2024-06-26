@@ -5,15 +5,14 @@
           <div class="flex-shrink-0">
             <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
           </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="/home" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
-              <a href="/blog" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Blog</a>
-              <a href="/about" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
-              <a href="/contact" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+          <div class="hidden md:block"> 
+            <div class="ml-10 flex items-baseline space-x-4"> 
+                <x-nav-link href="/" :active="request()->Is('/')">Home</x-nav-link>
+                <x-nav-link href="/blog" :active="request()->Is('blog')">Blog</x-nav-link>
+                <x-nav-link href="/about" :active="request()->Is('about')">About</x-nav-link>
+                <x-nav-link href="/contact" :active="request()->Is('contact')">Contact</x-nav-link>
             </div>
-          </div>
+        </div>
         </div>
         <div class="hidden md:block">
           <div class="ml-4 flex items-center md:ml-6">
