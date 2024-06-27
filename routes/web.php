@@ -12,10 +12,25 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact', ['title' => 'Contact Me']);
 });
-route::get('/blog', function () {
-    return view('blog', ['title' => 'Blog']);
+route::get('/posts', function () {
+    return view('posts', ['title' => 'Blog', 'posts'=>[
+        [
+        'title'=> 'Hari pertama', 
+        'author'=>'I Made Arudea Deniafinder Gotama',
+        'body'=>'Instalasi laragon dan mempelajari struktur folder laravel' 
+        ],
+        [
+        'title'=> 'Hari kedua', 
+        'author'=>'I Made Arudea Deniafinder Gotama',
+        'body'=>'Mempejari Blade Component' 
+        ],
+        [
+        'title'=> 'Hari ketiga', 
+        'author'=>'I Made Arudea Deniafinder Gotama',
+        'body'=>'?'
+        ],
+        ]
+    ]);
 });
-route::get('/addpost', function () {
-    return view('addpost', ['title' => 'Add a Post']);
-});
+
 
